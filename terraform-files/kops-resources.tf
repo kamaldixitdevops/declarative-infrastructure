@@ -8,9 +8,9 @@ resource "aws_s3_bucket" "k8-state"{
 
 // Create Security Group
 
-resource "aws_security_group" "k8-blog-sg"{
+resource "aws_security_group" "k8-dev-sg"{
 
-  name = "blog-${local.domain_name}"
+  name = "k8-dev-${local.domain_name}"
   vpc_id = "${module.blog_vpc.vpc_id}"
   tags = "${merge(local.tags)}"
 
